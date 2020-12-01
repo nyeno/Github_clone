@@ -1,0 +1,417 @@
+:root{
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    margin: 0;
+}
+a{ 
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    color: #0366d6;
+}
+
+/* styling the navigation at the header for small screens */
+.md-nav{
+    display: none;
+}
+
+.head-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f363d;
+    padding: 0.5em 1em;
+}
+.head-nav > a > .fa{
+    color: #fafbfc;
+}
+
+.fa-list{
+    font-size: 1.2rem;
+}
+.head-nav >.fa-github{
+    font-size: 3rem;
+}
+.drop-menu{
+    background-color: #2f363d;
+    padding: 0 1.5em;
+}
+.drop-menu > *{
+    display: block;
+    padding: 1em 0;
+    color: #fafbfc;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid  #586069;
+}
+
+/*styling the search box */
+
+.search-repo{
+    border: 1px solid  #586069;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.search-focus{
+    border: 2px solid #005cc5;
+    background-color: rgba(137, 147, 158, 0.3);
+}
+
+.search1{
+    padding: 0.5em 1em;
+    width: 90%;
+    background-color: inherit;
+    border: none;
+    caret-color: #fff;
+    color: #fff;
+}
+
+.search1::placeholder{
+    color: #e1e4e8;
+
+}
+.search1-focus{
+    width: 100%;
+}
+
+input:focus{
+    outline: none;
+}
+
+.expand{
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid  #6a737d;
+    color: #e1e4e8;
+    outline: none;
+}
+
+.hidden{ 
+    display: none;
+}
+
+.option{
+    display: none;
+}
+
+.container{
+    padding: 0.5em 0.7em;
+}
+
+/*styling the name and profile image */
+.profile-details{
+    display: flex;
+    align-items: flex-start;
+}
+.img{
+    width: 15%;
+    margin-top: 0.8em;
+}
+.profile-img{
+    width: 100%;
+    border: 1px solid #d1d5da;
+    border-radius: 100%;
+    background-color: white;
+}
+.my-names{
+    flex: 2;
+    padding-left: 1em;
+}
+h1{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #2f363d;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: 1.4rem;
+    font-weight: 200;
+    color: #959da5;
+    margin-top: 0;
+}
+.credentials{
+    font-size: 1.1rem;
+    color: #444d56;
+}
+.edit{
+    width: 100%;
+    border: 1px solid #d1d5da;
+    padding: 0.3em;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f6f8fa;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.followers > *{
+    padding-left: .01em;
+    color: #586069;
+    text-decoration: none;
+}
+.lg-details{ 
+    display: none;
+}
+.details{ 
+    font-size: 1rem;
+    color:  #444d56;
+}
+
+/*styling the tab that becomes sticky*/
+.main-nav{
+    padding: 0.3em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #d1d5da;
+    z-index: 1;
+}
+.main-nav > * {
+    padding: 0.3em 1em;
+    margin: 0.5em 0;
+    text-decoration: none;
+    color: #24292e;
+    
+}
+.repository-tab{
+    display: flex;
+    font-weight: 600;
+    border-bottom: 2px solid #f9826c;
+}
+
+.repo-number{
+    background-color: #d1d5da;
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 100%;
+    margin-left: 0.5em;
+    text-align: center;
+    padding-top: 0.2em;
+    vertical-align: center;
+    font-size: 0.8rem;
+
+}
+
+/*styling the nav with the search bar to select and search for repositories */
+.nav2{
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 1em;
+    position: relative;
+}
+.search2{
+    margin: 0.8em 0;
+    padding: 0.5em 0.8em;
+    width: 100%;
+    border: 2px solid #e1e4e8;
+    border-radius: 0.5em;
+}
+.search2:focus{
+    border: 3px solid #79b8ff;
+}
+.dropdown-btn{
+    padding: 0.6em 0.5em;
+    margin-right: 0.2em;
+    background-color: #f6f8fa;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+}
+.type-lang{
+    color: #959da5;
+    margin-right: 0.1em;
+}
+.new{
+    padding: 0.7em;
+    background-color: #28a745;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    color: #fff;
+}
+.fa-book{
+    color: #f6f8fa;
+}
+
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* styling the layout of the repo section */
+.repo{
+    position: relative;
+    padding: 1em 0 1.5em;
+    border-bottom: 1px solid #e1e4e8;
+}
+.repo > * {
+    padding: 0;
+    margin-bottom: 0.5em;
+    
+}
+.repo > p {
+    color: #586069;
+    font-size: 1rem;
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #0366d6;
+}
+
+.private{
+    color: #586069;
+    font-size: 0.8rem;
+    border: 1px solid #e1e4e8;
+    padding: 0.1em 0.5em;
+    border-radius: 0.8em;
+    margin-left: 0.2em;
+    font-weight: 400;
+}
+.repo > .star{
+    position: absolute;
+    top: 40%;
+    right: 0em;
+    font-size: 0.8rem;
+    border: 1px solid #d1d5da;
+    padding: 0.4em 1em;
+    border-radius: 6px;
+    background-color: #f6f8fa;
+}
+.message{
+    width: 70%;
+}
+.repo > .footnotes{
+    color: #6a737d;
+    font-size: 0.9rem;
+}
+.repo >.footnotes > .update{
+    font-size: 0.7rem;
+    margin-left: 1.4em;
+}
+
+/*styling the footer*/
+.footer-git {
+    display: none;
+}
+.footer-nav{
+    text-align: center;
+    margin: 3em 0.8em;
+}
+.footer-nav > *{
+    margin-right: 0.6em;
+    font-size: 0.8rem;
+}
+.footer-nav > .copyright{
+    color: #959da5;
+}
+.footer-nav > a{
+    color: #79b8ff;
+}
+
+
+/*styling the option menus for type and language of repo */
+.dropdown-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(27,31,35,0.1);
+    z-index: 2;
+}
+
+.dropdown-body{
+    position: fixed;
+    bottom: 25%;
+    left: 5%;
+    right: 5%;
+    background-color: #fff;
+    border-radius: 1em;
+    cursor: pointer;
+    z-index: 3;
+}
+.fa-close{
+    position: absolute;
+    right: 1.8em;
+    top: 1em;
+    color: #959da5;
+    
+}
+
+.select-item{
+    display: block;
+    padding: 0.8em 2em ;
+    border-bottom: 2px solid  #f6f8fa;
+}
+.select-item:last-of-type{
+    border-bottom: none;
+}
+.select-item:hover{
+    background-color: #f6f8fa;
+}
+
+
+@media(min-width:48em){
+    /* styling the nav on big screens*/
+    .head-nav{
+        display: none;
+    }
+    .md-nav{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5em;
+        background-color: #24292e;
+        padding: 1em;
+        color: #fff;
+    }
+    .md-nav .fa-github{
+        font-size: 2.5rem;
+    }
+    .search1{
+        width: 85%;
+    }
+    .search-repo{
+        height: 2em;
+    }
+    /*styling the main content*/
+    .container{
+        display: flex;
+        justify-content: space-between;
+        margin: 1em;
+    }
+    
+    .profile-details{
+        display: block;
+    }
+    .img{
+        width: 90%;
+        align-items: center;
+    }
+    .details{
+        display: none;
+    }
+    .lg-details{
+        display: block;
+    }
+
+    main{
+        margin-left: 1em;
+        width: 75%;
+    }
+}
